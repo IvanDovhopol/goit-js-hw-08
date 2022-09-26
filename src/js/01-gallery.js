@@ -1,9 +1,6 @@
 import { galleryItems } from './gallery-items.js';
-// import galleryCardTpl from '../templates/gallery-card.hbs';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
-// console.log(galleryCardTpl);
 
 const galleryRef = document.querySelector('.gallery');
 const itemsMarkup = createItemsImageMarkup(galleryItems);

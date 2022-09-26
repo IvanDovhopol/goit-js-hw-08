@@ -12,11 +12,13 @@ function onPlayTime(data) {
 player.on('timeupdate', throttle(onPlayTime, 1000));
 
 function initPage() {
-  if (JSON.parse(localStorage.getItem(STORAGE_KEY)) === null) {
+  const outputValue = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+  if (outputValue === null) {
     return;
   }
 
-  const paused = JSON.parse(localStorage.getItem(STORAGE_KEY))['seconds'];
+  const paused = outputValue['seconds'];
   if (paused) {
     player
       .setCurrentTime(paused)
